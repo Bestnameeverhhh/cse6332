@@ -47,3 +47,28 @@ function updateDescription() {
         alert("Name not found or invalid description.");
     }
 }
+function deleteUser() {
+    const nameInput = document.getElementById('name-input').value.toLowerCase();
+    const index = data.findIndex(item => item.name.toLowerCase() === nameInput);
+
+    if (index !== -1) {
+        data.splice(index, 1);
+        alert("User deleted successfully!");
+        document.getElementById('info-container').classList.add('hidden');
+    } else {
+        alert("Name not found.");
+    }
+}
+
+function deletePicture() {
+    const nameInput = document.getElementById('name-input').value.toLowerCase();
+    const entry = data.find(item => item.name.toLowerCase() === nameInput);
+
+    if (entry) {
+        entry.picture = '';
+        alert("Picture deleted successfully!");
+        showNameInfo(); // Update the displayed info to reflect changes
+    } else {
+        alert("Name not found.");
+    }
+}
