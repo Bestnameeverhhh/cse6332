@@ -44,5 +44,32 @@
           document.getElementById("display").innerText = input;
       }
   </script>
+  <!--q11-->
+  <div class="container">
+    <h1>Room Information</h1>
+    <input type="text" id="room-input" placeholder="Enter room name">
+    <button onclick="showRoomInfo()">Submit</button>
+
+    <div id="room-info" class="hidden">
+        <h2 id="room-name"></h2>
+        <p id="room-description"></p>
+        <img id="room-image" src="" alt="Room Image">
+    </div>
+</div>
+<!--Q12-->
+<div class="container">
+  <h1>Telephone Number Range Information</h1>
+  <input type="number" id="tel-start" placeholder="Enter starting telephone number">
+  <input type="number" id="tel-end" placeholder="Enter ending telephone number">
+  <button onclick="showTelRangeInfo()">Submit</button>
+
+  <div id="info-container"></div>
+<!--q13-->
+  <h1>Update Description</h1>
+  <input type="number" id="update-tel" placeholder="Enter telephone number">
+  <textarea id="new-description" placeholder="Enter new description"></textarea>
+  <button onclick="updateDescription()">Update</button>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
