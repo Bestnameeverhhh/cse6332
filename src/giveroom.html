@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>显示输入内容</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #display {
+            margin-top: 20px;
+            font-size: 18px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jiaying Zhang 177462</h1>
+    <input type="text" id="userInput" placeholder="input">
+    <button onclick="displayContent()">diaplay</button>
+    <div id="display"></div>
+
+    <script>
+        function displayContent() {
+            var input = document.getElementById("userInput").value;
+            document.getElementById("display").innerText = input;
+        }
+    </script>
+</body>
+</html>
