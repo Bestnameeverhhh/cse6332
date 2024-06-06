@@ -6,70 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Vanilla JavaScript App</title>
-
-  <style>
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 50px;
-    }
-    input, button {
-        margin: 10px;
-        padding: 10px;
-        font-size: 16px;
-    }
-    #display {
-        margin-top: 20px;
-        font-size: 18px;
-        color: blue;
-    }
-</style>
+ 
 </head>
 
 <body>
-  <main>
+ 
     <h1>Jiaying Zhang 177462</h1>
-    <image src="https://zjy.blob.core.windows.net/quiz0/dan.jpg?sp=r&st=2024-06-05T22:08:41Z&se=2024-06-06T06:08:41Z&spr=https&sv=2022-11-02&sr=b&sig=knz9bi8dgWyJYglanm%2BUBO3gCM%2B17p43KzOWpBJJ52Y%3D"></image>
+    <image src="https://zjy.blob.core.windows.net/quiz1/sinong.jpg?sp=r&st=2024-06-06T20:52:32Z&se=2024-06-07T04:52:32Z&spr=https&sv=2022-11-02&sr=b&sig=Zb67PNYP2Xd1JEFUHD3gbEiQ7JFSwg0UUcWdwuVzZXs%3D"></image>
+    <div class="container">
+      <h1>Name Information</h1>
+      <input type="text" id="name-input" placeholder="Enter name">
+      <button onclick="showNameInfo()">Submit</button>
 
-  </main>
-  <input type="text" id="userInput" placeholder="input">
-  <button onclick="displayContent()">diaplay</button>
-  <div id="display"></div>
+      <div id="info-container" class="hidden">
+          <h2 id="info-name"></h2>
+          <p id="info-cost"></p>
+          <p id="info-description"></p>
+          <img id="info-image" src="" alt="Image">
+      </div>
 
-  <script>
-      function displayContent() {
-          var input = document.getElementById("userInput").value;
-          document.getElementById("display").innerText = input;
-      }
-  </script>
-  <!--q11-->
-  <div class="container">
-    <h1>Room Information</h1>
-    <input type="text" id="room-input" placeholder="Enter room name">
-    <button onclick="showRoomInfo()">Submit</button>
+      <h1>Update Description</h1>
+      <input type="text" id="update-name" placeholder="Enter name">
+      <textarea id="new-description" placeholder="Enter new description"></textarea>
+      <button onclick="updateDescription()">Update</button>
+  </div>
+  <script src="script.js"></script>
 
-    <div id="room-info" class="hidden">
-        <h2 id="room-name"></h2>
-        <p id="room-description"></p>
-        <img id="room-image" src="" alt="Room Image">
-    </div>
-</div>
-<!--Q12-->
-<div class="container">
-  <h1>Telephone Number Range Information</h1>
-  <input type="number" id="tel-start" placeholder="Enter starting telephone number">
-  <input type="number" id="tel-end" placeholder="Enter ending telephone number">
-  <button onclick="showTelRangeInfo()">Submit</button>
-
-  <div id="info-container"></div>
-<!--q13-->
-  <h1>Update Description</h1>
-  <input type="number" id="update-tel" placeholder="Enter telephone number">
-  <textarea id="new-description" placeholder="Enter new description"></textarea>
-  <button onclick="updateDescription()">Update</button>
-</div>
-<script src="script.js"></script>
+  
 </body>
 </html>
